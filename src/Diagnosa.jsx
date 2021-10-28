@@ -33,23 +33,10 @@ const Diagnosa = () => {
       alamat: state.tgl,
       usia: state.usia,
     });
-    axios
-      .post("http://localhost:3000/diagnosa",  { state })
-      .then((res) => {
-        console.log("post succes : ", res);
-        daftar();
-      })
-      .catch((err) => {
-        console.log("ERRRR:: ", err.response.data);
-      });
     console.log("Document written with ID: ", docRef.id);
     console.log("state: ", state);
-  }
-
-  //() => history.push("/daftar")
-  const daftar = () => {
     history.push("/daftar");
-  };
+  }
 
   const onHandledChanged = (event) => {
     const name = event.target.name;
@@ -104,76 +91,25 @@ const Diagnosa = () => {
                 </Grid>
                 <Grid container justifyContent="center" margin="5px 0">
                   <Grid item xs={4.75} md={4.75}>
-                    <TextField
-                      autoComplete="Nama"
-                      name="nama"
-                      required
-                      id="Nama"
-                      onChange={onHandledChanged}
-                      label="Nama"
-                      autoFocus
-                      size="small"
-                      fullWidth
-                    />
+                    <TextField autoComplete="Nama" name="nama" required id="Nama" onChange={onHandledChanged} label="Nama" autoFocus size="small" fullWidth />
                   </Grid>
                   <Grid item xs={1} md={1}></Grid>
                   <Grid item xs={4.75} md={4.75}>
-                    <TextField
-                      required
-                      id="HP"
-                      label="No. Handphone"
-                      type="number"
-                      name="hp"
-                      autoComplete="HP"
-                      onChange={onHandledChanged}
-                      size="small"
-                      fullWidth
-                      style={{}}
-                    />
+                    <TextField required id="HP" label="No. Handphone" type="number" name="hp" autoComplete="HP" onChange={onHandledChanged} size="small" fullWidth style={{}} />
                   </Grid>
                 </Grid>
                 <Grid container justifyContent="center" margin="10px 0">
                   <Grid item xs={4.75} md={4.75}>
-                    <TextField
-                      autoComplete="date"
-                      name="tgl"
-                      required
-                      onChange={onHandledChanged}
-                      id="tgll"
-                      label="Tgl Lahir dd/mm/yy"
-                      autoFocus
-                      size="small"
-                      fullWidth
-                    />
+                    <TextField autoComplete="date" name="tgl" required onChange={onHandledChanged} id="tgll" label="Tgl Lahir dd/mm/yy" autoFocus size="small" fullWidth />
                   </Grid>
                   <Grid item xs={1} md={1}></Grid>
                   <Grid item xs={4.75} md={4.75}>
-                    <TextField
-                      required
-                      id="age"
-                      label="usia"
-                      name="usia"
-                      onChange={onHandledChanged}
-                      autoComplete="age"
-                      size="small"
-                      fullWidth
-                      style={{}}
-                    />
+                    <TextField required id="age" label="usia" name="usia" onChange={onHandledChanged} autoComplete="age" size="small" fullWidth style={{}} />
                   </Grid>
                 </Grid>
                 <Grid item xs={0.75} md={0.75} />
                 <Grid item xs={4.75} md={4.75}>
-                  <TextField
-                    required
-                    id="Alamat"
-                    label="Alamat"
-                    name="alamat"
-                    autoComplete="Alamat"
-                    onChange={onHandledChanged}
-                    size="small"
-                    fullWidth
-                    style={{}}
-                  />
+                  <TextField required id="Alamat" label="Alamat" name="alamat" autoComplete="Alamat" onChange={onHandledChanged} size="small" fullWidth style={{}} />
                 </Grid>
                 <Grid item xs={6.5} md={6.5} />
                 <Grid container justifyContent="center" marginTop="30px">
