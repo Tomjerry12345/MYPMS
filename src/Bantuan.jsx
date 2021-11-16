@@ -4,10 +4,16 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import pms from "./pms.jpg";
 import { CssBaseline, makeStyles, Paper } from "@mui/material";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import { Button, CardActionArea, CardActions } from "@mui/material";
+import { pms } from "./assets";
+import { useHistory } from "react-router";
 
 const Bantuan = () => {
+  const history = useHistory();
   return (
     <div>
       <Grid container>
@@ -23,8 +29,9 @@ const Bantuan = () => {
           }}
         >
           <Typography
-            variant="h5"
+            variant="h3"
             textAlign="center"
+            color="white"
             style={{
               fontFamily: "Mulish",
               marginLeft: "30px",
@@ -32,47 +39,89 @@ const Bantuan = () => {
           >
             Bantuan
           </Typography>
-          <Grid item marginTop="5ch">
+          <Grid item>
             <Paper
               elevation={2}
               style={{
                 marginLeft: 25,
                 marginRight: 25,
                 padding: 8,
-                marginTop: -30,
-                background: "#e6edf4",
+                // marginBottom: "32px",
               }}
             >
-              <Grid container marginTop="0ch">
-                <Grid item xs={12} md={8}>
-                  <p>
-                    Premenstrual syndrome (PMS) atau sindrom pramenstruasi
-                    adalah gejala-gejala yang dialami wanita sebelum memasuki
-                    masa bulanan (menstruasi). Gejala tersebut berupa perubahan
-                    fisik, perubahan perilaku, dan perubahan emosi. Umumnya,
-                    gejala PMS muncul 1–2 minggu sebelum hari pertama menstruasi
-                    setiap bulannya.
-                  </p>
+              <Grid container justifyContent="space-evenly" margin="20px 0">
+                <Grid item>
+                  <Card sx={{ maxWidth: 345 }}>
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="250"
+                        src={pms}
+                        alt="gejala pms"
+                      />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                          Gejala-Gejala PMS
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          Lizards are a widespread group of squamate reptiles,
+                          with over 6,000 species, ranging across all continents
+                          except Antarctica
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions
+                    // style={{ justifyContent: "center" }}
+                    >
+                      <Button
+                        variant="outlined"
+                        style={{
+                          color: "#C16C6C",
+                          borderColor: "#C16C6C",
+                        }}
+                        onClick={() => history.push("/gejala pms")}
+                      >
+                        <b>Read More</b>
+                      </Button>
+                    </CardActions>
+                  </Card>
                 </Grid>
-                <Grid item xs={0} md={0.5}></Grid>
-                <Grid
-                  item
-                  xs={12}
-                  md={3}
-                  display="flex"
-                  justifyContent="center"
-                >
-                  <Box
-                    component="img"
-                    sx={{
-                      width: {
-                        md: 250,
-                        xs: 290,
-                      },
-                    }}
-                    alt="The house from the offer."
-                    src={pms}
-                  />
+                <br />
+                <Grid item>
+                  <Card sx={{ maxWidth: 345 }}>
+                    <CardActionArea>
+                      <CardMedia
+                        component="img"
+                        height="250"
+                        src={pms}
+                        alt="gejala pms"
+                      />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                          Informasi Pakar
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          Lizards are a widespread group of squamate reptiles,
+                          with over 6,000 species, ranging across all continents
+                          except Antarctica
+                        </Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions
+                    // style={{ justifyContent: "center" }}
+                    >
+                      <Button
+                        variant="outlined"
+                        style={{
+                          color: "#C16C6C",
+                          borderColor: "#C16C6C",
+                        }}
+                        onClick={() => history.push("/info pakar")}
+                      >
+                        <b>Read More</b>
+                      </Button>
+                    </CardActions>
+                  </Card>
                 </Grid>
               </Grid>
             </Paper>
