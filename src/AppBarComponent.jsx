@@ -6,7 +6,7 @@ import Grid from "@mui/material/Grid";
 import { useHistory } from "react-router-dom";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
-import logopms from "./logo pms.png";
+import { logopms } from "./assets";
 
 const AppBarComponent = () => {
   let history = useHistory();

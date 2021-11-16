@@ -1,11 +1,11 @@
-import * as React from "react";
+import React from "react";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import { CssBaseline, makeStyles, Paper } from "@mui/material";
 import { pms } from "./assets";
 
-const Informasi = () => {
+const gejalapms = () => {
   return (
     <div>
       <Grid container>
@@ -21,25 +21,15 @@ const Informasi = () => {
           }}
         >
           <Typography
-            variant="h5"
-            color="white"
-            style={{
-              fontFamily: "Mulish",
-              marginLeft: "30px",
-            }}
-          >
-            Apa itu
-          </Typography>
-
-          <Typography
             variant="h3"
+            textAlign="center"
             color="white"
             style={{
               fontFamily: "Mulish",
               marginLeft: "30px",
             }}
           >
-            Premenstrual Syndrome?
+            Gejala-Gejala PMS
           </Typography>
           <Grid item marginTop="5ch" height="170vh">
             <Paper
@@ -193,4 +183,4 @@ const Informasi = () => {
   );
 };
 
-export default Informasi;
+export default gejalapms;
